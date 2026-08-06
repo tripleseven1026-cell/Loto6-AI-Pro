@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loto6 AI Pro v2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🎯 Loto6 AI Pro v2</h1>
+    <p>AI分析・予想システム</p>
+</header>
+
+<main>
+
+<section class="card">
+
+<h2>データ読込</h2>
+
+<input
+type="file"
+id="jsonFile"
+accept=".json">
+
+<button id="loadBtn">
+JSON読込
+</button>
+
+</section>
+
+<section class="card">
+
+<h2>最新結果</h2>
+
+<div id="latestNumbers">
+まだ読み込んでいません
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>AI分析</h2>
+
+<button id="analysisBtn">
+分析開始
+</button>
+
+<div id="analysisResult">
+まだ分析していません
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>AI予想</h2>
+
+<button id="predictionBtn">
+予想開始
+</button>
+
+<div id="predictionResult">
+まだ予想していません
+</div>
+
+</section>
+
+</main>
+
+<script src="history.js"></script>
+<script src="analysis.js"></script>
+<script src="prediction.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
