@@ -31,3 +31,22 @@ loadBtn.addEventListener("click", () => {
   reader.readAsText(jsonFile.files[0]);
 
 });
+
+});
+
+analysisBtn.addEventListener("click", () => {
+
+    const result = analyzeHistory(history);
+
+    analysisResult.textContent = result.message;
+
+});
+
+predictionBtn.addEventListener("click", () => {
+
+    const result = predictNumbers(history);
+
+    predictionResult.textContent =
+        result.numbers.join(" , ");
+
+});
