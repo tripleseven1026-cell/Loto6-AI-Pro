@@ -1,27 +1,13 @@
-function predictNumbers(data) {
+function predictNumbers(data){
 
-    if (!data || data.length === 0) {
-        document.getElementById("predictionResult").innerHTML =
-            "予想するデータがありません。";
+    if(!data || data.length===0){
+        document.getElementById("predictionResult").textContent =
+        "データがありません";
         return;
     }
 
-    const numbers = [];
+    const nums=[1,8,14,22,31,40];
 
-    while (numbers.length < 6) {
-
-        const n = Math.floor(Math.random() * 43) + 1;
-
-        if (!numbers.includes(n)) {
-            numbers.push(n);
-        }
-
-    }
-
-    numbers.sort((a, b) => a - b);
-
-    document.getElementById("predictionResult").innerHTML = `
-        <h3>AI予想番号</h3>
-        <h2>${numbers.join(" ・ ")}</h2>
-    `;
+    document.getElementById("predictionResult").textContent =
+    nums.join(" ・ ");
 }
