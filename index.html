@@ -2,13 +2,39 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loto6 AI Pro</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <h1>Loto6 AI Pro</h1>
 
-<p>開発中...</p>
+<input type="file" id="jsonFile" accept=".json">
+
+<br><br>
+
+<button id="loadBtn">JSON読込</button>
+<button id="analysisBtn">分析</button>
+<button id="predictionBtn">予想</button>
+
+<hr>
+
+<h2>読込結果</h2>
+<div id="latestNumbers">未読込</div>
+
+<h2>分析結果</h2>
+<div id="analysisResult">まだ分析していません</div>
+
+<h2>予想結果</h2>
+<div id="predictionResult">まだ予想していません</div>
+
+<script src="history.js"></script>
+<script src="analysis.js"></script>
+<script src="prediction.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
