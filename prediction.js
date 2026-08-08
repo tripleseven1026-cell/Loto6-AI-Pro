@@ -1,29 +1,40 @@
 function predictNumbers(data) {
 
     if (!data || data.length === 0) {
-
         document.getElementById("predictionResult").textContent =
             "データがありません";
-
         return;
-
     }
 
-    const count = Array(44).fill(0);
+    const score = Array(44).fill(0);
+    const lastSeen = Array(44).fill(-1);
 
-    data.forEach(draw => {
+    data.forEach((draw, index) => {
+
+        if (!draw.numbers) return;
 
         draw.numbers.forEach(num => {
 
-            if (num >= 1 && num <= 43) {
-
-                count[num]++;
-
-            }
+            score[num] += 3;
+            lastSeen[num] = index;
 
         });
 
     });
+
+    for (let i = 1; i <= 43; i++) {
+
+        if (lastSeen[i] === -1) {
+
+            score[i] += 20;
+
+        } else {
+
+            score[i] += data.length - lastSeen[i];
+
+        }
+
+    }
 
     const ranking = [];
 
@@ -32,23 +43,28 @@ function predictNumbers(data) {
         ranking.push({
 
             number: i,
-            count: count[i]
+            score: score[i]
 
         });
 
     }
 
-    ranking.sort((a,b)=>b.count-a.count);
+    ranking.sort((a,b)=>b.score-a.score);
 
-    const result = ranking
+    const result =
+        ranking
         .slice(0,6)
         .map(x=>x.number)
         .sort((a,b)=>a-b);
 
-    document.getElementById("predictionResult").innerHTML=
+    document.getElementById("predictionResult").innerHTML =
 
-        "<h3>AI予測番号</h3>" +
+        "<h3>AI予想番号</h3>" +
 
-        "<h2>"+result.join(" ・ ")+"</h2>";
+        "<h2>" +
+
+        result.join(" ・ ") +
+
+        "</h2>";
 
 }
