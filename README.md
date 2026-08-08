@@ -1,11 +1,22 @@
-# Loto6 AI Pro
+# Loto6 AI Pro v3
 
-ロト6 AI Pro 開発プロジェクト
+ロト6の過去データをJSONで読み込み、分析とAI予想を行うスマホ対応Webアプリです。
 
-## 開発目標
+## ファイル構成
 
-- 過去データ分析
-- AI予想
-- 統計分析
-- Android対応
-- PC対応
+- index.html
+- style.css
+- app.js
+- history.js
+- analysis.js
+- prediction.js
+- aiEngine.js
+- data/sample.json
+
+## GitHub Pages
+
+リポジトリ直下にファイルを配置して、Settings → Pages → main / root を選択してください。
+
+## 注意
+
+このアプリは分析支援ツールです。ロト6は偶然性が強く、的中を保証するものではありません。

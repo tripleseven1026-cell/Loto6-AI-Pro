@@ -1,84 +1,67 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loto6 AI Pro v2</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loto6 AI Pro v3</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>🎯 Loto6 AI Pro v2</h1>
-    <p>AI分析・予想システム</p>
+<header class="app-header">
+  <h1>🎯 Loto6 AI Pro v3</h1>
+  <p>ロト6分析・AI予想システム</p>
 </header>
 
-<main>
+<main class="container">
 
-<section class="card">
+  <section class="card">
+    <h2>① データ読込</h2>
+    <p class="note">JSONファイルを選択して読み込むか、サンプルデータで動作確認できます。</p>
 
-<h2>データ読込</h2>
+    <input type="file" id="jsonFile" accept=".json">
 
-<input
-type="file"
-id="jsonFile"
-accept=".json">
+    <div class="button-row">
+      <button id="loadBtn">JSON読込</button>
+      <button id="sampleBtn" class="secondary">サンプル読込</button>
+    </div>
 
-<button id="loadBtn">
-JSON読込
-</button>
+    <div id="dataStatus" class="status">未読込</div>
+  </section>
 
-</section>
+  <section class="card">
+    <h2>② 最新結果</h2>
+    <div id="latestNumbers" class="result-box">まだ読み込んでいません</div>
+  </section>
 
-<section class="card">
+  <section class="card">
+    <h2>③ AI分析</h2>
+    <button id="analysisBtn">分析開始</button>
+    <div id="analysisResult" class="result-box">まだ分析していません</div>
+  </section>
 
-<h2>最新結果</h2>
+  <section class="card">
+    <h2>④ AI予想</h2>
+    <button id="predictionBtn">予想開始</button>
+    <div id="predictionResult" class="result-box">まだ予想していません</div>
+  </section>
 
-<div id="latestNumbers">
-まだ読み込んでいません
-</div>
-
-</section>
-
-<section class="card">
-
-<h2>AI分析</h2>
-
-<button id="analysisBtn">
-分析開始
-</button>
-
-<div id="analysisResult">
-まだ分析していません
-</div>
-
-</section>
-
-<section class="card">
-
-<h2>AI予想</h2>
-
-<button id="predictionBtn">
-予想開始
-</button>
-
-<div id="predictionResult">
-まだ予想していません
-</div>
-
-</section>
+  <section class="card warning">
+    <h2>注意</h2>
+    <p>ロト6は偶然性が強く、的中を保証するものではありません。このアプリは過去データを使った分析支援ツールです。</p>
+  </section>
 
 </main>
 
+<footer>
+  Loto6 AI Pro v3
+</footer>
+
 <script src="history.js"></script>
+<script src="aiEngine.js"></script>
 <script src="analysis.js"></script>
 <script src="prediction.js"></script>
 <script src="app.js"></script>
-<script src="aiScore.js"></script>
-<script src="hotNumber.js"></script>
-<script src="coldNumber.js"></script>
 
 </body>
 </html>
