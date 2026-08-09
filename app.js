@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     try{
       const response = await fetch("loto6-data-full.json");
       const raw=await response.json();
-      loadRawData(raw,"サンプル");
+      loadRawData(raw,"本番データ");
     }catch(err){
-      alert("サンプルデータを読み込めませんでした。GitHub Pages上で開いてください。");
+      alert("本番データを読み込めませんでした。GitHub Pages上で開いてください。");
     }
   });
 
