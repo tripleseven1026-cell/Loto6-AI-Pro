@@ -7,6 +7,11 @@ function predictNumbers(data){
   }
   const predictions=window.AIEngine.makePredictions(history);
   let html="<h3>AI予想 3パターン</h3>";
+  const reasons={
+  A:"出現回数・直近傾向・コールド傾向を総合的に評価しています。",
+  B:"最近よく出ている数字を優先し、勢いを重視しています。",
+  C:"長く出ていない数字を優先し、反発候補を重視しています。"
+　};
   predictions.forEach(p=>{
     html+="<div class='prediction-card'>";
     html+="<div class='prediction-title'>"+p.name+"： "+p.label+"</div>";
