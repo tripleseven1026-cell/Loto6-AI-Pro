@@ -7,25 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="app-header">
   <h1>🎯 Loto6 AI Pro v3</h1>
   <p>ロト6分析・AI予想システム</p>
 </header>
 
 <main class="container">
-
   <section class="card">
     <h2>① データ読込</h2>
-    <p class="note">JSONファイルを選択して読み込むか、サンプルデータで動作確認できます。</p>
-
+    <p class="note">JSONを選択して読み込むか、サンプルデータで確認できます。</p>
     <input type="file" id="jsonFile" accept=".json">
-
     <div class="button-row">
       <button id="loadBtn">JSON読込</button>
       <button id="sampleBtn" class="secondary">サンプル読込</button>
     </div>
-
     <div id="dataStatus" class="status">未読込</div>
   </section>
 
@@ -48,20 +43,16 @@
 
   <section class="card warning">
     <h2>注意</h2>
-    <p>ロト6は偶然性が強く、的中を保証するものではありません。このアプリは過去データを使った分析支援ツールです。</p>
+    <p>ロト6は偶然性が強く、的中を保証するものではありません。このアプリは分析支援ツールです。</p>
   </section>
-
 </main>
 
-<footer>
-  Loto6 AI Pro v3
-</footer>
+<footer>Loto6 AI Pro v3</footer>
 
 <script src="history.js"></script>
 <script src="aiEngine.js"></script>
 <script src="analysis.js"></script>
 <script src="prediction.js"></script>
 <script src="app.js"></script>
-
 </body>
 </html>

@@ -1,111 +1,24 @@
-/* Loto6 AI Pro v3 */
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f2f5f9;
-  color: #1f2937;
-}
-
-.app-header {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
-  color: white;
-  text-align: center;
-  padding: 22px 14px;
-}
-
-.app-header h1 { margin: 0; font-size: 26px; }
-.app-header p { margin: 8px 0 0; opacity: 0.95; }
-
-.container { max-width: 760px; margin: 0 auto; padding: 14px; }
-
-.card {
-  background: white;
-  border-radius: 14px;
-  padding: 16px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-}
-
-.card h2 { margin: 0 0 12px; color: #0d47a1; font-size: 20px; }
-.note { font-size: 14px; color: #4b5563; line-height: 1.6; }
-
-input[type="file"] {
-  width: 100%;
-  padding: 12px;
-  border: 1px dashed #90a4ae;
-  border-radius: 10px;
-  background: #f8fafc;
-}
-
-.button-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
-button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #1565c0;
-  color: white;
-  font-size: 17px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-button.secondary { background: #455a64; }
-button:active { transform: scale(0.99); opacity: 0.9; }
-
-.status {
-  margin-top: 12px;
-  padding: 10px;
-  border-radius: 10px;
-  background: #e3f2fd;
-  color: #0d47a1;
-  font-weight: 700;
-}
-
-.result-box {
-  margin-top: 12px;
-  padding: 12px;
-  border-radius: 10px;
-  background: #f8fafc;
-  line-height: 1.7;
-  overflow-x: auto;
-}
-
-.number-line { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
-
-.ball {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #1565c0;
-  color: white;
-  font-weight: 800;
-  font-size: 16px;
-}
-
-.prediction-card {
-  border: 1px solid #dbeafe;
-  border-radius: 12px;
-  padding: 12px;
-  margin-top: 12px;
-  background: #ffffff;
-}
-
-.prediction-title { font-weight: 800; color: #0d47a1; margin-bottom: 6px; }
-.small { font-size: 13px; color: #4b5563; }
-.warning { background: #fff8e1; }
-footer { text-align: center; padding: 20px; color: #6b7280; }
-
-@media (max-width: 600px) {
-  .app-header h1 { font-size: 22px; }
-  .button-row { grid-template-columns: 1fr; }
-  .ball { width: 38px; height: 38px; font-size: 15px; }
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f2f5f9;color:#1f2937}
+.app-header{background:linear-gradient(135deg,#0d47a1,#1976d2);color:white;text-align:center;padding:22px 14px}
+.app-header h1{margin:0;font-size:26px}
+.app-header p{margin:8px 0 0;opacity:.95}
+.container{max-width:760px;margin:0 auto;padding:14px}
+.card{background:white;border-radius:14px;padding:16px;margin-bottom:16px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.card h2{margin:0 0 12px;color:#0d47a1;font-size:20px}
+.note{font-size:14px;color:#4b5563;line-height:1.6}
+input[type=file]{width:100%;padding:12px;border:1px dashed #90a4ae;border-radius:10px;background:#f8fafc}
+.button-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{width:100%;padding:14px;margin-top:12px;border:none;border-radius:10px;background:#1565c0;color:white;font-size:17px;font-weight:700}
+button.secondary{background:#455a64}
+button:active{transform:scale(.99);opacity:.9}
+.status{margin-top:12px;padding:10px;border-radius:10px;background:#e3f2fd;color:#0d47a1;font-weight:700}
+.result-box{margin-top:12px;padding:12px;border-radius:10px;background:#f8fafc;line-height:1.7;overflow-x:auto}
+.number-line{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.ball{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#1565c0;color:white;font-weight:800;font-size:16px}
+.prediction-card{border:1px solid #dbeafe;border-radius:12px;padding:12px;margin-top:12px;background:white}
+.prediction-title{font-weight:800;color:#0d47a1;margin-bottom:6px}
+.small{font-size:13px;color:#4b5563}
+.warning{background:#fff8e1}
+footer{text-align:center;padding:20px;color:#6b7280}
+@media(max-width:600px){.app-header h1{font-size:22px}.button-row{grid-template-columns:1fr}.ball{width:38px;height:38px;font-size:15px}}
