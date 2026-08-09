@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   sampleBtn.addEventListener("click",async()=>{
     try{
-      const response=await fetch("data/sample.json");
+      const response = await fetch("sample.json");
       const raw=await response.json();
       loadRawData(raw,"サンプル");
     }catch(err){
