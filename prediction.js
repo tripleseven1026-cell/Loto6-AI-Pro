@@ -15,6 +15,7 @@ function predictNumbers(data){
   predictions.forEach(p=>{
     html+="<div class='prediction-card'>";
     html+="<div class='prediction-title'>"+p.name+"： "+p.label+"</div>";
+    html+="<div class='small'>理由："+(reasons[p.name]||"AIスコアで選定")+"</div>";
     html+=window.AIEngine.balls(p.numbers);
     html+="<div class='small'>";
     html+="信頼度目安："+p.confidence+"% ／ ";
