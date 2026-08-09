@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   sampleBtn.addEventListener("click",async()=>{
     try{
-      const response = await fetch("loto6-data.json");
+      const response = await fetch("loto6-data-full.json");
       const raw=await response.json();
       loadRawData(raw,"サンプル");
     }catch(err){
