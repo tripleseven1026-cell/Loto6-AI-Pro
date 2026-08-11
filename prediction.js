@@ -18,7 +18,7 @@ function predictNumbers(data){
     html+="<div class='small'>理由："+(reasons[p.name]||"AIスコアで選定")+"</div>";
     html+=window.AIEngine.balls(p.numbers);
     html+="<div class='small'>";
-    html+="信頼度目安："+p.confidence+"% ／ ";
+    html+="AIスコア目安："+p.confidence+"% ／ ";
     html+="合計："+p.balance.sum+" ／ ";
     html+="奇数"+p.balance.odd+"・偶数"+p.balance.even+" ／ ";
     html+="低"+p.balance.low+"・高"+p.balance.high;
