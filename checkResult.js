@@ -101,3 +101,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+　<script src="checkResult.js"></script>
